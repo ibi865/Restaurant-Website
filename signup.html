@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body class="body-m">
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <div class="logo-c">
+            <img src="img/logo2.png" alt="Gourmet Delights Logo" class="logo">
+        </div>
+        <div class="options">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="signup.html">Signup/Login</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Login/Signup Form Section -->
+    <div class="login-signup-container">
+        <div class="form-container">
+            <div class="toggle-btn">
+                <button id="login-btn" class="active">Login</button>
+                <button id="signup-btn">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="active">
+                <h2>Login</h2>
+                <input type="text" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form">
+                <h2>Signup</h2>
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <input type="text" placeholder="CNIC">
+                <input type="text" placeholder="Phone Number">
+                
+                <!-- Gender Section (Radio Buttons) -->
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+
+                <!-- Address Section (Text Area) -->
+                <textarea placeholder="Address"></textarea>
+                
+                <button>Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-m">
+        <p>&copy; 2024 Gourmet Delights. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            loginBtn.classList.add('active');
+            signupBtn.classList.remove('active');
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            signupBtn.classList.add('active');
+            loginBtn.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
